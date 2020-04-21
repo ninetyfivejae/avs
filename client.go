@@ -27,7 +27,7 @@ func (c *Client) CreateDownchannel(accessToken string) (<-chan *Message, error) 
 	if err != nil {
 		return nil, err
 	}
-	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36")
+	//req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36")
 	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", accessToken))
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
